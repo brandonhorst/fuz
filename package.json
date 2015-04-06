@@ -1,0 +1,43 @@
+{
+  "name": "fuz",
+  "version": "0.0.1",
+  "description": "Javascript fuzzy matching, scoring, sorting, and approximating library",
+  "main": "lib/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "prepublish": "npm run clean && npm run build",
+    "pretest": "babel test --out-dir tmp",
+    "test": "mocha tmp",
+    "build": "babel src --out-dir lib",
+    "validate": "npm run build && npm run test",
+    "clean": "rimraf lib tmp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brandonhorst/fuz.git"
+  },
+  "keywords": [
+    "lacona",
+    "fuzzy",
+    "match",
+    "suggest",
+    "score",
+    "sort",
+    "sublime",
+    "atom",
+    "approximate"
+  ],
+  "author": "@brandonhorst",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/brandonhorst/fuz/issues"
+  },
+  "homepage": "https://github.com/brandonhorst/fuz",
+  "devDependencies": {
+    "babel": "^5.0.9",
+    "chai": "^2.2.0",
+    "mocha": "^2.2.1"
+  }
+}
